@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PeopleExperts AMAZINGMONIALS</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+            integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet" />
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"
+            integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <style type="text/css">
+            span {
+                font-family: Yellowtail;
+                text-decoration: underline;
+                text-decoration-color: orange;
+                -webkit-text-decoration-color: orange; /* Safari */
+            }
+
+            .hidden.menu {
+                display: none;
+            }
+
+            .masthead.segment {
+                min-height: 600px;
+                padding: 1em 0em;
+            }
+            .masthead .logo.item img {
+                margin-right: 1em;
+            }
+            .masthead .ui.menu .ui.button {
+                margin-left: 0.5em;
+            }
+            .masthead h1.ui.header {
+                margin-top: 1em;
+                margin-bottom: 0em;
+                font-size: 4em;
+                font-weight: normal;
+            }
+            .masthead h2 {
+                font-size: 1.7em;
+                font-weight: normal;
+            }
+
+            .ui.vertical.stripe {
+                padding: 8em 0em;
+            }
+            .ui.vertical.stripe h3 {
+                font-size: 2em;
+            }
+            .ui.vertical.stripe .button + h3,
+            .ui.vertical.stripe p + h3 {
+                margin-top: 3em;
+            }
+            .ui.vertical.stripe .floated.image {
+                clear: both;
+            }
+            .ui.vertical.stripe p {
+                font-size: 1.33em;
+            }
+            .ui.vertical.stripe .horizontal.divider {
+                margin: 3em 0em;
+            }
+
+            .quote.stripe.segment {
+                padding: 0em;
+            }
+            .quote.stripe.segment .grid .column {
+                padding-top: 5em;
+                padding-bottom: 5em;
+            }
+
+            .footer.segment {
+                padding: 5em 0em;
+            }
+
+            .secondary.pointing.menu .toc.item {
+                display: none;
+            }
+
+            @media only screen and (max-width: 700px) {
+                .ui.fixed.menu {
+                    display: none !important;
+                }
+                .secondary.pointing.menu .item,
+                .secondary.pointing.menu .menu {
+                    display: none;
+                }
+                .secondary.pointing.menu .toc.item {
+                    display: block;
+                }
+                .masthead.segment {
+                    min-height: 350px;
+                }
+                .masthead h1.ui.header {
+                    font-size: 2em;
+                    margin-top: 1.5em;
+                }
+                .masthead h2 {
+                    margin-top: 0.5em;
+                    font-size: 1.5em;
+                }
+            }
+        </style>
+        <script src="assets/library/jquery.min.js"></script>
+        <script src="../dist/components/visibility.js"></script>
+        <script src="../dist/components/sidebar.js"></script>
+        <script src="../dist/components/transition.js"></script>
+        <script>
+            $(document).ready(function () {
+                // fix menu when passed
+                $(".masthead").visibility({
+                    once: false,
+                    onBottomPassed: function () {
+                        $(".fixed.menu").transition("fade in");
+                    },
+                    onBottomPassedReverse: function () {
+                        $(".fixed.menu").transition("fade out");
+                    },
+                });
+
+                // create sidebar and attach to menu open
+                $(".ui.sidebar").sidebar("attach events", ".toc.item");
+            });
+        </script>
+    </head>
+    <body>
+        <!-- Following Menu -->
+        <div class="ui large top fixed hidden menu">
+            <div class="ui container">
+                <a class="item" href="index.html#intro">PEOPLEEXPERTS</a>
+                <a class="item" href="amazingmonials.html#track-record">AMAZINGMONIALS&trade;</a>
+                <a class="active item" href="#clients-speak">CLIENTS SPEAK</a>
+                <a class="item" href="process.html#how-we-do-it">HOW WE DO IT</a>
+                <a class="item" href="leadership.html#about-laura">ABOUT LAURA</a>
+                <div class="right menu">
+                    <div class="item">
+                        <a class="ui primary button" href="contact.html#lets-talk">CONTACT</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Sidebar Menu -->
+        <div class="ui vertical inverted sidebar menu">
+            <a class="item" href="index.html#intro">PEOPLEEXPERTS</a>
+            <a class="item" href="amazingmonials.html#track-record">AMAZINGMONIALS&trade;</a>
+            <a class="active item" href="#clients-speak">CLIENTS SPEAK</a>
+            <a class="item" href="process.html#how-we-do-it">HOW WE DO IT</a>
+            <a class="item" href="leadership.html#about-laura">ABOUT LAURA</a>
+            <a class="item" href="contact.html#lets-talk">CONTACT</a>
+        </div>
+        <!-- Page Contents -->
+        <div class="pusher">
+            <div class="ui inverted vertical masthead center aligned segment">
+                <div class="ui container">
+                    <div class="ui large secondary inverted pointing menu">
+                        <a class="toc item">
+                            <i class="sidebar icon"></i>
+                        </a>
+                        <a class="item" href="index.html#intro">PEOPLEEXPERTS</a>
+                        <a class="item" href="amazingmonials.html#track-record">AMAZINGMONIALS&trade;</a>
+                        <a class="active item" href="#clients-speak">CLIENTS SPEAK</a>
+                        <a class="item" href="process.html#how-we-do-it">HOW WE DO IT</a>
+                        <a class="item" href="leadership.html#about-laura">ABOUT LAURA</a>
+                        <div class="right item">
+                            <a class="ui inverted button" href="contact.html#lets-talk">CONTACT</a>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <img class="ui fluid image" src="../assets/header.png" alt="PeopleExperts Amazingmonials"/>
+                <div class="ui text container">
+                    <h1 class="ui inverted header">
+                        PeopleExperts
+                    </h1>
+                    <h2><span>the Proof is in the People</span></h2>
+                </div>
+            </div>
+            <div class="ui vertical stripe segment" id="clients-speak">
+
+                <div class="ui middle aligned stackable grid container">
+                    <div class="ui centered stackable cards">
+                        <div class="ui raised red card">
+                            <div class="content">
+                                <div class="description">
+                                    <p>"Laura is able to bring out the best in everyone she interviews, and finds a way to bring emotion (whether it's laughter or tears) into every real person she films. She is also able to find people who have character, warmth, and personality. Laura is a one of a kind find!"
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="extra content">
+                                <div class="left floated author">
+                                    <b>Linda Kaplan Thaler</b><br />
+                                    The Kaplan Thaler Group
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui raised orange card">
+                            <div class="content">
+                                <div class="description">
+                                    <p>"Laura makes participants feel uninhibited and totally at ease allowing their true personalities to shine through. She actually makes people enjoy being interviewed. She delivered great people from all over the country for our Ford project and helped make the campaign a huge success."</p>
+                                </div>
+                            </div>
+                            <div class="extra content">
+                                <div class="left floated author">
+                                    <b>Mike Priebe</b><br />
+                                    Creative Director, J. Walter Thompson
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui raised olive card">
+                            <div class="content">
+                                <div class="description">
+                                    <p>"Laura is by far our most effective and popular guest speaker. She makes the benefits of conducting consumer research come alive. When she speaks, they sit on the edge of their chairs straining to hear what Laura has to say about her experiences... and importantly they learn a lot from this master crafts person. She is unparalleled in her insight to elicit information from the students. She is able to make student from multiple diverse cultural backgrounds share their stories with her."</p>
+                              </div>
+                            </div>
+                            <div class="extra content">
+                                <div class="left floated author">
+                                    <b>Professor Barry Soloff</b><br />
+                                  Global Ad Director &amp; Business Faculty
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui raised green card">
+                            <div class="content">
+                                <div class="description">
+                                    <p>"Laura Slutsky ignites my college classes like lightening every time she lectures. She has the skills and insights to make each student feel great about themselves as she demonstrates her impeccable talents for interviewing and doing research seamlessly. She is able to get kids who have not spoken all semester to stand in front of the class and enjoy every minute of their celebrity. Laura is truly one of a kind. If you have the opportunity to work with her, do not pass it up. It will be a most rewarding experience."</p>
+                              </div>
+                            </div>
+                            <div class="extra content">
+                                <div class="left floated author">
+                                    <b>Anthony Perrotto</b><br />
+                                  Fmr. Ad Agency Producer &amp; Professor
+                                </div>
+                            </div>
+                        </div>                      
+                        <div class="ui raised teal card">
+                            <div class="content">
+                                <div class="description">
+                                    <p>"Laura has the uncanny ability to draw real emotion, real personality and real brilliance out of real people. Her spots shine with compelling language and artful storytelling. Simply put: she's the best."</p>
+                              </div>
+                            </div>
+                            <div class="extra content">
+                                <div class="left floated author">
+                                    <b>Frank Ginsberg</b><br />
+                                    Avrett Free Ginsberg
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui raised blue card">
+                            <div class="content">
+                                <div class="description">
+                                    <p>"Talk about real people, Slutsky is as real as it gets! Everyone loves her immediately and, because of her quick wit and genuine personality, she brings out the best in them."</p>
+                              </div>
+                            </div>
+                            <div class="extra content">
+                                <div class="left floated author">
+                                    <b>John Arehart</b><br />
+                                    Creative Director, Ferrara &amp; Co.
+                                </div>
+                            </div>
+                        </div>       
+                        <div class="ui raised violet card">
+                            <div class="content">
+                                <div class="description">
+                                    <p>"Laura Slutsky. Memorable name, unforgettable talent."</p>
+                              </div>
+                            </div>
+                            <div class="extra content">
+                                <div class="left floated author">
+                                    <b>Amil Gargano</b><br />
+                                    Advertising Legend
+                                </div>
+                            </div>
+                        </div>                      
+                    </div>
+                </div>              
+            </div>
+            <div class="ui inverted vertical footer segment">
+                <div class="ui container">
+                    <h4 class="ui inverted header" style="text-align: center;">
+                        <div id="copyright">
+                            &copy; &nbsp;
+                            <script>
+                                document.getElementById("copyright").appendChild(document.createTextNode(new Date().getFullYear()));
+                            </script>
+                            &nbsp; PeopleExperts
+                        </div>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PeopleExperts AMAZINGMONIALS</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+            integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet" />
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"
+            integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <style type="text/css">
+            span {
+                font-family: Yellowtail;
+                text-decoration: underline;
+                text-decoration-color: orange;
+                -webkit-text-decoration-color: orange; /* Safari */
+            }
+
+            .hidden.menu {
+                display: none;
+            }
+
+            .masthead.segment {
+                min-height: 600px;
+                padding: 1em 0em;
+            }
+            .masthead .logo.item img {
+                margin-right: 1em;
+            }
+            .masthead .ui.menu .ui.button {
+                margin-left: 0.5em;
+            }
+            .masthead h1.ui.header {
+                margin-top: 1em;
+                margin-bottom: 0em;
+                font-size: 4em;
+                font-weight: normal;
+            }
+            .masthead h2 {
+                font-size: 1.7em;
+                font-weight: normal;
+            }
+
+            .ui.vertical.stripe {
+                padding: 8em 0em;
+            }
+            .ui.vertical.stripe h3 {
+                font-size: 2em;
+            }
+            .ui.vertical.stripe .button + h3,
+            .ui.vertical.stripe p + h3 {
+                margin-top: 3em;
+            }
+            .ui.vertical.stripe .floated.image {
+                clear: both;
+            }
+            .ui.vertical.stripe p {
+                font-size: 1.33em;
+            }
+            .ui.vertical.stripe .horizontal.divider {
+                margin: 3em 0em;
+            }
+
+            .quote.stripe.segment {
+                padding: 0em;
+            }
+            .quote.stripe.segment .grid .column {
+                padding-top: 5em;
+                padding-bottom: 5em;
+            }
+
+            .footer.segment {
+                padding: 5em 0em;
+            }
+
+            .secondary.pointing.menu .toc.item {
+                display: none;
+            }
+
+            @media only screen and (max-width: 700px) {
+                .ui.fixed.menu {
+                    display: none !important;
+                }
+                .secondary.pointing.menu .item,
+                .secondary.pointing.menu .menu {
+                    display: none;
+                }
+                .secondary.pointing.menu .toc.item {
+                    display: block;
+                }
+                .masthead.segment {
+                    min-height: 350px;
+                }
+                .masthead h1.ui.header {
+                    font-size: 2em;
+                    margin-top: 1.5em;
+                }
+                .masthead h2 {
+                    margin-top: 0.5em;
+                    font-size: 1.5em;
+                }
+            }
+        </style>
+        <script src="assets/library/jquery.min.js"></script>
+        <script src="../dist/components/visibility.js"></script>
+        <script src="../dist/components/sidebar.js"></script>
+        <script src="../dist/components/transition.js"></script>
+        <script>
+            $(document).ready(function () {
+                // fix menu when passed
+                $(".masthead").visibility({
+                    once: false,
+                    onBottomPassed: function () {
+                        $(".fixed.menu").transition("fade in");
+                    },
+                    onBottomPassedReverse: function () {
+                        $(".fixed.menu").transition("fade out");
+                    },
+                });
+
+                // create sidebar and attach to menu open
+                $(".ui.sidebar").sidebar("attach events", ".toc.item");
+            });
+        </script>
+    </head>
+    <body>
+        <!-- Following Menu -->
+        <div class="ui large top fixed hidden menu">
+            <div class="ui container">
+                <a class="item" href="index.html#intro">PEOPLEEXPERTS</a>
+                <a class="item" href="amazingmonials.html#track-record">AMAZINGMONIALS&trade;</a>
+                <a class="item" href="feedback.html#clients-speak">CLIENTS SPEAK</a>
+                <a class="active item" href="#how-we-do-it">HOW WE DO IT</a>
+                <a class="item" href="leadership.html#about-laura">ABOUT LAURA</a>
+                <div class="right menu">
+                    <div class="item">
+                        <a class="ui primary button" href="contact.html#lets-talk">CONTACT</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Sidebar Menu -->
+        <div class="ui vertical inverted sidebar menu">
+            <a class="item" href="index.html#intro">PEOPLEEXPERTS</a>
+            <a class="item" href="amazingmonials.html#track-record">AMAZINGMONIALS&trade;</a>
+            <a class="item" href="feedback.html#clients-speak">CLIENTS SPEAK</a>
+            <a class="active item" href="#how-we-do-it">HOW WE DO IT</a>
+            <a class="item" href="leadership.html#about-laura">ABOUT LAURA</a>
+            <a class="item" href="contact.html#lets-talk">CONTACT</a>
+        </div>
+        <!-- Page Contents -->
+        <div class="pusher">
+            <div class="ui inverted vertical masthead center aligned segment">
+                <div class="ui container">
+                    <div class="ui large secondary inverted pointing menu">
+                        <a class="toc item">
+                            <i class="sidebar icon"></i>
+                        </a>
+                        <a class="item" href="index.html#intro">PEOPLEEXPERTS</a>
+                        <a class="item" href="amazingmonials.html#track-record">AMAZINGMONIALS&trade;</a>
+                        <a class="item" href="feedback.html#clients-speak">CLIENTS SPEAK</a>
+                        <a class="active item" href="#how-we-do-it">HOW WE DO IT</a>
+                        <a class="item" href="leadership.html#about-laura">ABOUT LAURA</a>
+                        <div class="right item">
+                            <a class="ui inverted button" href="contact.html#lets-talk">CONTACT</a>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <img class="ui fluid image" src="../assets/header.png" alt="PeopleExperts Amazingmonials"/>
+                <div class="ui text container">
+                    <h1 class="ui inverted header">
+                        PeopleExperts
+                    </h1>
+                    <h2><span>the Proof is in the People</span></h2>
+                </div>
+            </div>
+            <div class="ui vertical stripe segment" id="how-we-do-it">
+                <div class="ui middle aligned stackable grid container">
+                <div class="row">
+                    <div class="six wide column">
+                        <h3 style="color: #00b5ad;">
+                            <i class="teal shop icon"></i>
+                            Understand Your Consumer
+                        </h3>
+                        <ul style="text-align: left; margin-left: 35px;">
+                            <li>Identify key markets and demographics</li>
+                            <li>Develop strategies to reach them</li>
+                            <li>Create detailed consumer insight guides</li>
+                        </ul>
+                    </div>
+                    <div class="five wide column">
+                        <h3 style="color: #f2711c;"><i class="orange street view icon"></i>Find the Right People</h3>
+                        <ul style="text-align: left; margin-left: 35px;">
+                            <li>Travel to the key markets</li>
+                            <li>Meet the real consumers</li>
+                            <li>Screen who will be best on camera</li>
+                        </ul>
+                    </div>
+                    <div class="five wide column">
+                        <h3 style="color: #db2828;"><i class="red video icon"></i>Capture the Wow!</h3>
+                        <ul style="text-align: left; margin-left: 35px;">
+                            <li>Conduct 1:1 interviews and focus groups</li>
+                            <li>Interview real people on camera</li>
+                            <li>Create a great commercial!</li>
+                        </ul>
+                    </div>
+                </div>                  
+                    <div class="row">
+                        <div class="column">
+                            <p>At PeopleExperts we always vet the people we recruit to test products. Whether on camera or in their homes, we make sure our credible consumers can articulate themselves in ways that make for substantial, authentic, persuasive claims.</p>
+                            <p>Nothing is rehearsed. Why? It allows the consumer who is giving their testimonial to be real, spontaneous; thereby creating original thinking. We've learned that <b>when a consumer is loyal to a brand</b>, they will talk about it in amazing ways. Be a detergent, a hair product, a car, a pain relief medicine &ndash; just about anything. People have actual relationships with your product, and that's what PeopleExperts captures.</p>
+                            <p>Laura Slutsky and her team set up the shoot so that the consumers think they're coming in to a focus group. There is no mention of a commercial to be filmed. Laura sits off camera as the director/interviewer, in one-on-one contact with the clients. Creative and Account teams can watch the on-camera interview from a nearby room. Most of the time there is not a storyboard as is for a slice of life commercial. Based on the client's creative needs, she handcrafts her interview to achieve memorable ads. The responses are then cut into 15 second, 30 second, 60 second, and even longer form such as online docu-videos.</p>
+                            <p>And voila: <b>AMAZINGMONIALS&trade;!</b></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ui inverted vertical footer segment">
+                <div class="ui container">
+                    <h4 class="ui inverted header" style="text-align: center;">
+                        <div id="copyright">
+                            &copy; &nbsp;
+                            <script>
+                                document.getElementById("copyright").appendChild(document.createTextNode(new Date().getFullYear()));
+                            </script>
+                            &nbsp; PeopleExperts
+                        </div>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
